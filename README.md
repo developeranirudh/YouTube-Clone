@@ -1,165 +1,70 @@
-## git setup :
-# got to your project location :
-default setting :
-=================
-echo "# Rahul-Coding-Tast-List" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/rahulcdev13/Rahul-Coding-Tast-List.git
-git push -u origin main
-====================
-git branch -M main
-git remote add origin https://github.com/rahulcdev13/Namaste-Youtube-App.git
-git push -u origin main
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> $ git init
-> $ git add .
-> $ git commit -m  "message"
-# Go to github account and create a new reporsotory.
-# Then execute below command on command line in youre project folder.
-> $ git branch -M main
-> $ git remote add origin https://github.com/rahulcdev13/Namaste-Youtube-App.git
-> git push -u origin main
-================================
-# Create-react-app
+## Available Scripts
 
-npx create-react-app namaste-youtube
+In the project directory, you can run:
 
-- means executing the react app
+### `npm start`
 
----
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# install the tailwindcss
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-npm i -D tailwindcss
+### `npm test`
 
-# Need to initialize tailwind then configure file will created
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-npx tailwindcss init
-added in config file :
-content: [
-"./src/**/*.js"
-],
+### `npm run build`
 
-# After add below 3 tailwind in your App.css file
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-@tailwind base
-@tailwind components
-@tailwind utilities
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-design UI :
-{
-// Head
-// Body
-// Sidebar
-// MenuItems
-// MainContainer
-// ButtonList
-// VideoContainer
-// VideoCart
-//
-}
-==============
-Highar order function
+### `npm run eject`
 
-<!-- Search suggestion api data -->
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-fetch("https://corsproxy.io/?http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=iphone")
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-<!-- Dbouncing : -->
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-typing slow : 200ms
-typing fast : 30ms
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-performance :
+## Learn More
 
-- iphone pro max - 14 latter \* 1000 = 140000
-- With debouncing - 3 API calls \* 1000 = 3000
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Debuoncing with 200ms
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- if difference between two key stroke is < 200ms - Decline api call
-- < 200ms make an api call
+### Code Splitting
 
-// make an api call after ever key press
-// but if the difference between 2 API calls is greate that (<) 200ms
-// decline the api call
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-/\*
+### Analyzing the Bundle Size
 
-- key press -i
-- - render the componnet
-- - useEffect()
-- - Start Timer = > make api call after 200ms
-- \*\* key press -ip
-- - destroy the componnet(useEffect return method)
-- - re-render the componnet
-- - useEffect()
-- - Start Timer = > make api call after 200ms
-- - with new timer
-- setTimeout(200) - Make an api call
-- \*/
-  <!-- Cache is here  -->
-  const arrComment =[
-  {
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply : [
-  {
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply:[]
-  }
-  ]
-  },
-  {
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply : [
-  {
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply:[{
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply:[{
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply:[{
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply:[]
-  }]
-  }]
-  }]
-  }
-  ]
-  },
-  {
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply : [
-  {
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply:[{
-  name :"Rahul chavan",
-  text: "namaste rract project very good",
-  reply:[]
-  }]
-  }
-  ]
-  }
-  ]
-====================================
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-web sockets
-API Polling
-================
-check live chating count
-document.getElementsByTagName("yt-live-chat-text-message-renderer").length;
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
